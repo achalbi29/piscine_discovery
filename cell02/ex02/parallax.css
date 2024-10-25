@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+.parallax {
+    /* Remplacez les URL par vos propres images */
+    background-image: url('lv.jpg'); /* Image de fond pour la première section */
+    height: 100vh; /* Hauteur de la fenêtre */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#section2 {
+    background-image: url('lvui.jpeg'); /* Image de fond pour la deuxième section */
+}
+
+.message {
+    font-size: 2em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    height: 100vh; /* Hauteur de la fenêtre pour le bloc noir */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.black-block {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+}
+
+.black-block p {
+    font-size: 1.5em;
+}

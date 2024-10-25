@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+header {
+    background: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #2e6da4;
+}
+
+h3 {
+    color: #d9534f;
+}
+
+ul, ol {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+#selectionResult {
+    margin-top: 20px;
+    font-weight: bold;
+}

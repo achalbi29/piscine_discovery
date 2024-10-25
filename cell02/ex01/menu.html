@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandwich SNCF</title>
+    <link rel="stylesheet" href="menu.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <header>
+        <h1>Sandwich SNCF</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Menu des roulants</h2>
+            <label for="ingredients">Choisissez un ingrédient :</label>
+            <select id="ingredients">
+                <option value="">Sélectionnez un ingrédient</option>
+                <option value="Jambon de Paris">Jambon de Paris</option>
+                <option value="Jambon cru">Jambon cru</option>
+                <option value="Fromage (comté)">Fromage (comté)</option>
+                <option value="Fromage (brie)">Fromage (brie)</option>
+                <option value="Salade verte">Salade verte</option>
+                <option value="Tomate">Tomate</option>
+                <option value="Beurre">Beurre</option>
+                <option value="Mayonnaise">Mayonnaise</option>
+            </select>
+            <button onclick="addIngredient()">Ajouter</button>
+            <h3>Ingrédients sélectionnés :</h3>
+            <div id="selectedIngredients"></div>
+        </section>
+
+        <section>
+            <h2>Instructions pour le Sandwich</h2>
+            <ol>
+                <li>Coupez la baguette en deux dans le sens de la longueur.</li>
+                <li>Tartinez l'intérieur avec du beurre ou de la mayonnaise.</li>
+                <li>Ajoutez les tranches de jambon autorisées.</li>
+                <li>Ajoutez une tranche de fromage autorisé.</li>
+                <li>Ajoutez quelques feuilles de salade et des rondelles de tomate.</li>
+                <li>Assaisonnez si désiré.</li>
+                <li>Refermez le sandwich et coupez-le en portions.</li>
+                <li>Emballer si nécessaire.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Bon appétit ! 🚆🥪</p>
+    </footer>
+
+    <script>
+        const selectedIngredients = [];
+
+        function addIngredient() {
+            const select = document.getElementById('ingredients');
+            const ingredient = select.value;
+
+            if (ingredient && !selectedIngredients.includes(ingredient)) {
+                selectedIngredients.push(ingredient);
+                updateSelectionDisplay();
+            } else {
+                alert("Veuillez sélectionner un ingrédient valide ou éviter les doublons.");
+            }
+
+            select.value = ""; // Réinitialise le menu déroulant
+        }
+
+        function updateSelectionDisplay() {
+            const display = document.getElementById('selectedIngredients');
+            display.innerHTML = selectedIngredients.length ? selectedIngredients.join(', ') : "Aucun ingrédient sélectionné.";
+        }
+    </script>
+</body>
+</html>

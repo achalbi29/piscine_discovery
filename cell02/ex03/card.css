@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.carte-profil {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+}
+
+.photo-profil {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.reseaux-sociaux img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.contact-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
